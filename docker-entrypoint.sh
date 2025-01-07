@@ -18,6 +18,7 @@ if [ -f "$FILE" ]; then
         "${COBALTSTRIKE_EXP}"
 else
     # 1) Always download / update
+    touch /opt/cobaltstrike/cs-download-check
     token=$(curl -s https://download.cobaltstrike.com/download \
                 -d "dlkey=${COBALTSTRIKE_KEY}" \
             | grep 'href="/downloads/' | cut -d '/' -f3)
