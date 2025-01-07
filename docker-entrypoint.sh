@@ -21,7 +21,7 @@ tar zxf /tmp/cobaltstrike.tgz -C /opt
 echo "${COBALTSTRIKE_KEY}" | /opt/cobaltstrike/update
 
 # 3) Finally run the teamserver
-/opt/cobaltstrike/teamserver \
+/opt/cobaltstrike/server/teamserver \
     "$IPADDRESS" \
     "${COBALTSTRIKE_PASS}" \
     "/opt/cobaltstrike/${COBALTSTRIKE_PROFILE}" \
